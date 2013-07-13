@@ -36,8 +36,10 @@ if (isset($_POST["send"])) {
     <link rel="stylesheet" href="stylesheets/normalize.css" type="text/css" />
     <link rel="stylesheet" href="stylesheets/index.css" type="text/css" />
 
+<!--
     <link href="http://fonts.googleapis.com/css?family=Offside" rel="stylesheet" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet" type="text/css" />
+-->
     <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" type="text/css" />
 
   </head>
