@@ -1,3 +1,3 @@
 #!/bin/sh
 
-rm -rf /var/www/agileavatars.com && cp -r . /var/www/agileavatars.com
+rm -rf /var/www/agileavatars.com && cp -r www /var/www/agileavatars.com
