@@ -88,6 +88,49 @@ if (isset($_POST["send"])) {
     </div>
 
     <footer>
+      <ul id="social">
+        <li id="twitter">
+          <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.agileavatars.com" data-via="pbourgau" data-counturl="http://www.agileavatars.com" >Tweet</a>
+          <script type="text/javascript">
+            (function(){
+              var twitterWidgets = document.createElement('script');
+              twitterWidgets.type = 'text/javascript';
+              twitterWidgets.async = true;
+              twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+              document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+            })();
+          </script>
+        </li>
+        <li id="linkedin">
+          <script src="//platform.linkedin.com/in.js" type="text/javascript">
+            lang: en_US
+          </script>
+          <script type="IN/Share" data-url="http://www.agileavatars.com" data-counter="right"></script>
+        </li>
+        <li id="google-plus">
+          <div class="g-plusone" data-size="medium"></div>
+          <script type="text/javascript">
+            (function() {
+              var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+              script.src = 'https://apis.google.com/js/plusone.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+            })();
+          </script>
+        </li>
+        <li id="facebook">
+          <div class="fb-like" data-href="http://www.agileavatars.com" data-send="true" data-layout="button_count" data-width="150" data-show-faces="true"></div>
+          <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+          </script>
+        </li>
+      </ul>
+
       <p>An idea by <a href="http://philippe.bourgau.net">Philippe Bourgau</a> - 2013</p>
     </footer>
 
@@ -100,5 +143,6 @@ if (isset($_POST["send"])) {
       ga('create', 'UA-42546181-1', 'agileavatars.com');
       ga('send', 'pageview');
     </script>
+
   </body>
 </html>
