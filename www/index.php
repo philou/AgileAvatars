@@ -30,7 +30,7 @@ if (isset($_POST["send"])) {
     <title>AgileAvatars.com</title>
 
     <meta name="keywords" content="custom, agile, avatars, magnet, order" />
-    <meta name="description" content="A presentation about a future store where to order customized agile avatar magnets" />
+    <meta name="description" content="A store where to order customized agile avatar magnets" />
     <meta name="author" content="Philippe Bourgau" />
 
     <link rel="stylesheet" href="stylesheets/normalize.css" type="text/css" />
