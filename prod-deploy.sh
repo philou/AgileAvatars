@@ -12,3 +12,5 @@ lcd $SOURCEFOLDER
 mirror --reverse --delete --verbose . $TARGETFOLDER
 bye
 "
+
+echo "Don't worry if it fails with 'Unknown command ;' check the deployed website"
