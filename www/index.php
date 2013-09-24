@@ -36,10 +36,6 @@ if (isset($_POST["send"])) {
     <link rel="stylesheet" href="stylesheets/normalize.css" type="text/css" />
     <link rel="stylesheet" href="stylesheets/index.css" type="text/css" />
 
-<!--
-    <link href="http://fonts.googleapis.com/css?family=Offside" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet" type="text/css" />
--->
     <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" type="text/css" />
 
   </head>
@@ -60,7 +56,7 @@ if (isset($_POST["send"])) {
               <input type="text" name="email" placeholder="Email" title="Enter your email if you are interested"/>
             </li>
             <li>
-              <input type="submit" name="send" value="I am interested" />
+              <input type="submit" name="send" value="I am interested" onClick="_gaq.push(['_trackEvent', 'Contact', 'Interested',,, false]);"/>
             </li>
           </ol>
         </form>
