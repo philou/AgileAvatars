@@ -18,15 +18,16 @@ if (isset($_POST["send"])) {
 
   if (is_null($error)) {
     $to = "philippe.bourgau@agileavatars.com";
-    $subject = "[Interested by AgileAvatars.com] " . $subject;
+    $full_subject = "[Interested by AgileAvatars.com] " . $subject;
     $from = $email;
     $headers = "From: " . $from;
-    if (!mail($to, $subject, $body, $headers)) {
+    if (!mail($to, $full_subject, $body, $headers)) {
       $error = "the mail failed to send.";
     }
   }
 }
 else {
+  $subject="I am interested in www.agileavatars.com";
   $body="Please keep me up to date about www.agileavatars.com";
 }
 ?>
@@ -59,11 +60,11 @@ else {
           <ol>
             <li>
               <label for="email">Email</label>
-              <input type="text" name="email" placeholder="Enter your email" title="Enter your email if you are interested"/>
+              <input type="text" name="email" placeholder="Enter your email" title="Enter your email if you are interested" value="<?php echo $email ?>"/>
             </li>
             <li>
               <label for="subject">Title</label>
-              <input type="text" name="subject" value="I am interested by www.agileavatars.com" title="Customize your subject if you want"/>
+              <input type="text" name="subject" value="<?php echo $subject ?>" title="Customize your subject if you want"/>
             </li>
             <li>
               <label for="body">Message</label>
