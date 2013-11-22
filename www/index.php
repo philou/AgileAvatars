@@ -5,6 +5,8 @@ $error = NULL;
 if (isset($_POST["send"])) {
 
   $email=$_POST["email"];
+  $subject=$_POST["subject"];
+  $body=$_POST["body"];
 
   $email_matcher = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*" .
     "@" .
@@ -15,14 +17,17 @@ if (isset($_POST["send"])) {
   }
 
   if (is_null($error)) {
-    $to = "philippe.bourgau@gmail.com";
-    $subject = "[Interested by AgileAvatars.com]";
+    $to = "philippe.bourgau@agileavatars.com";
+    $subject = "[Interested by AgileAvatars.com] " . $subject;
     $from = $email;
     $headers = "From: " . $from;
     if (!mail($to, $subject, $body, $headers)) {
       $error = "the mail failed to send.";
     }
   }
+}
+else {
+  $body="Please keep me up to date about www.agileavatars.com";
 }
 ?>
 <html>
@@ -48,12 +53,21 @@ if (isset($_POST["send"])) {
     <div id="container">
 
       <section id="content">
-        <p id="summary">Tired of post-its falling from your whiteboard ? Order your own customized avatar magnets.</p>
+        <p id="summary">Tired of post-its falling from your agile or kanban whiteboard ? Order your own customized avatar magnets.</p>
 
         <form action="index.php" method="post">
           <ol>
             <li>
-              <input type="text" name="email" placeholder="Email" title="Enter your email if you are interested"/>
+              <label for="email">Email</label>
+              <input type="text" name="email" placeholder="Enter your email" title="Enter your email if you are interested"/>
+            </li>
+            <li>
+              <label for="subject">Title</label>
+              <input type="text" name="subject" value="I am interested by www.agileavatars.com" title="Customize your subject if you want"/>
+            </li>
+            <li>
+              <label for="body">Message</label>
+              <textarea name="body" title="Customize message if you want"/><?php echo $body; ?></textarea>
             </li>
             <li>
               <input type="submit" name="send" value="I am interested" onClick="_gaq.push(['_trackEvent', 'Contact', 'Interested',,, false]);"/>

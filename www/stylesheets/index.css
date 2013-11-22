@@ -19,35 +19,42 @@ ol {
     padding-left: 0;
 }
 
-section#content p, section#content input{
+section#content p, section#content input {
     font-size: 1.4em;
 }
 
 section#content {
     float: right;
     width: 400px;
-    margin: 50px;
+    margin: 0 50px;
 }
 
 #summary {
-    margin: 3em 0;
+    margin: 0;
     font-style: italic;
 }
 
 form {
-    margin-top: 10em;
+    margin-top: 3em;
 }
 form li {
-    width: 20em;
     margin: 0 auto;
 }
 
 form li+li {
     margin-top: 1em;
 }
-form input {
+form input, form textarea {
+    box-sizing: border-box;
     width: 100%;
     border-width: 1px;
+}
+form input[type=text], form textarea {
+    border-style: inset;
+}
+form textarea {
+    height: 100px;
+    resize: none;
 }
 
 p.feedback {
