@@ -71,7 +71,7 @@ else {
               <textarea name="body" title="Customize message if you want"/><?php echo $body; ?></textarea>
             </li>
             <li>
-              <input type="submit" name="send" value="I am interested" onClick="_gaq.push(['_trackEvent', 'Contact', 'Interested',,, false]);"/>
+              <input type="submit" name="send" value="I am interested" onClick="ga('send', 'event', 'Contact', 'Interested');"/>
             </li>
           </ol>
         </form>
