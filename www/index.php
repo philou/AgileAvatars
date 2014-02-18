@@ -71,7 +71,7 @@ else {
               <textarea name="body" title="Customize message if you want"/><?php echo $body; ?></textarea>
             </li>
             <li>
-              <input type="submit" name="send" value="I am interested" onClick="ga('send', 'event', 'Contact', 'Interested');"/>
+              <input type="submit" name="send" value="I am interested"/>
             </li>
           </ol>
         </form>
@@ -83,6 +83,7 @@ else {
         <?php } elseif (isset($_POST["send"])) { ?>
 
           <p class="feedback success">Thank you for your interest</p>
+          <script>window.onload = function() { ga('send', 'event', 'Contact', 'Interested'); };</script>
 
         <?php } ?>
 
@@ -151,8 +152,10 @@ else {
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-42546181-1', 'agileavatars.com');
+      ga('create', 'UA-30589315-1', 'auto', {'allowLinker': true});
       ga('send', 'pageview');
+      ga('require', 'linker');
+      ga('linker:autoLink', ['bourgau.net']);
     </script>
 
   </body>
