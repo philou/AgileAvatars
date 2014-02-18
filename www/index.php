@@ -83,7 +83,7 @@ else {
         <?php } elseif (isset($_POST["send"])) { ?>
 
           <p class="feedback success">Thank you for your interest</p>
-          <script>window.onload = function() { ga('send', 'event', 'Contact', 'Interested'); };</script>
+          <script>window.onload = function() { ga('send', 'event', 'Customers', 'Interested', '<?php echo $email ?>'); };</script>
 
         <?php } ?>
 
