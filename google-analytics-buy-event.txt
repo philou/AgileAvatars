@@ -1,7 +1,8 @@
-1. customize the email
-2. copy
-3. paste in a browser new window
-4. send
-5. make sure it appears in GA
+1. open http://www.hidemyass.com/
+2. customize the email
+3. copy
+4. paste in hide my ass
+5. send
+6. make sure it appears in GA
 
 http://www.google-analytics.com/collect?v=1&tid=UA-30589315-1&cid=35009a79-1a05-49d7-b876-2b884d0f825b&t=event&ec=Customers&ea=Bought&el=sylvain.thierry@yahoo.com
